@@ -1,7 +1,7 @@
 const currentDate = document.querySelector(".current-date"),
 daysTag = document.querySelector(".days"),
 prevNextIcon = document.querySelectorAll(".icons span"),
-daysButton = document.querySelectorAll(".button");
+daysButton = document.querySelectorAll(".shopButton");
 
 let date = new Date(),
 currYear = date.getFullYear(),
