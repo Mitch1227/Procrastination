@@ -1,5 +1,5 @@
 const currentDate = document.querySelector(".current-date"),
-daysTag = document.querySelector(".days"),
+daysTag = document.querySelector(".shopButton"),
 prevNextIcon = document.querySelectorAll(".icons span"),
 daysButton = document.querySelectorAll(".weeks li");
 
@@ -52,9 +52,9 @@ prevNextIcon.forEach(icon => {
     });
 });
 
-daysButton.forEach(li => {
-    li.addEventListener("click", () =>{
-        console.log(li);
+daysButton.forEach(button => {
+    button.addEventListener("click", () =>{
+        console.log("clicked");
     });
 });
 
