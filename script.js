@@ -54,7 +54,7 @@ prevNextIcon.forEach(icon => {
 
 daysButton.forEach(button => {
     button.addEventListener("click", () =>{
-        console.log("clicked");
+        console.log(button);
     });
 });
 
