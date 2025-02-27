@@ -6,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .myButton{
+    padding: 10px 20px;
     cursor: pointer;
 }
 body{
