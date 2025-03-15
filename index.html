@@ -39,28 +39,21 @@
     }
     function text(){
       alert(document.querySelector("#task").value);
+      const now = new Date();
+      const parsedInputDate = new Date(document.querySelector("#task").value);
+
+      if (isNaN(parsedInputDate)) {
+          alert("Invalid date format");
+      }
+
+      const timeDifference = now.getTime() - parsedInputDate.getTime();
+      const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    if (typeof daysDifference === 'number') {
+      alert(`Difference in days: ${daysDifference}`);
+    } else {
+      alert(daysDifference);
     }
-/*  const now = new Date();
-  const parsedInputDate = new Date(inputDate);
-
-    if (isNaN(parsedInputDate)) {
-        return "Invalid date format";
-    }
-
-  const timeDifference = now.getTime() - parsedInputDate.getTime();
-  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-
-  return daysDifference;
-}
-
-const inputDate = prompt("Enter a date in YYYY-MM-DD format:");
-const difference = dateDifference(inputDate);
-
-if (typeof difference === 'number') {
-    alert(`Difference in days: ${difference}`);
-} else {
-    alert(difference);
-}
-    } */
+      } 
   </script>
 </body>
