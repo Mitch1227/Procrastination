@@ -14,13 +14,13 @@
       font-family: "Lucida Console", "Courier New", monospace;
       font-weight: bold;
       background-color:#4f65f7;
-      border: 3px solid white;
+      border: 2px solid white;
     }
     .pointsButton{
       font-family: "Lucida Console", "Courier New", monospace;
       font-weight: bold;
       background-color:#4f65f7;
-      border: 3px solid white;
+      border: 2px solid white;
     }
     button{
       display: block;
@@ -36,7 +36,7 @@
   <button class="pointsButton" onclick="text()">Add Points</button>
   <div class="points" id="pointsCounter">Points: 0</div>
   <h1>Shop</h1>
-  <button class="purchaseButton" onclick="subtractPoints(2), alert("Nice choice! Go enjoy that sweet treat, you earned it!")">Sweet Treat: 2 Points</button>
+  <button class="purchaseButton" onclick="subtractPoints(2); alert("Nice choice! Go enjoy that sweet treat, you earned it!")">Sweet Treat: 2 Points</button>
   <button class="purchaseButton" onclick="subtractPoints(3)">Extra Hour of Sleep: 3 Points</button>
   <script>
     let points = 0;
