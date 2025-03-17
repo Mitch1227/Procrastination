@@ -9,7 +9,6 @@
       font-family: "Lucida Console", "Courier New", monospace;
       font-weight: bold;
       background-color:#d29afc;
-      text-align: center;
     }
     .purchaseButton{
       font-family: "Lucida Console", "Courier New", monospace;
@@ -17,13 +16,10 @@
       background-color:#9afcd2;
       border: 1px solid #fcd29a;
       color: black;
-     
+      margin: 10px;
       cursor: pointer;
       border-radius: 8%;
       display: flex;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
     }
     .pointsButton{
       font-family: "Lucida Console", "Courier New", monospace;
@@ -61,6 +57,7 @@
   <button class="purchaseButton" onclick="tv()">Watch a TV Episode: 1 Point</button>
   <button class="purchaseButton" onclick="game()">30 Minutes of Game Time: 2 Points</button>
   <button class="purchaseButton" onclick="dinner()">Dinner With a Friend: 3 Points</button>
+  <button class="purchaseButton" onclick="walk()">Go Take a Walk: 1 Point</button>
   <h1><u>Accountability</u></h1>
   <button class="recapButton" onclick="report()">Week Recap</button>
   <script>
@@ -143,6 +140,14 @@
       if(points>=3){
         subtractPoints(3);
         alert("It's good to keep up with your friends. Ask them how productive they have been this week!");
+      } else {
+        alert("Not enough points!");
+      }
+    }
+    function walk(){
+      if(points>=1){
+        subtractPoints(1);
+        alert("Go enjoy some fresh air.");
       } else {
         alert("Not enough points!");
       }
