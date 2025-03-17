@@ -16,6 +16,8 @@
       background-color:#9afcd2;
       border: 1px solid #fcd29a;
       color: black;
+      display: block;
+      padding: 7px 35px;
     }
     .pointsButton{
       font-family: "Lucida Console", "Courier New", monospace;
@@ -23,8 +25,14 @@
       background-color:#9afcd2;
       border: 1px solid #fcd29a;
       color: black;
+      display: block;
     }
-    button{
+    .recapButton{
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-weight: bold;
+      background-color:#9afcd2;
+      border: 1px solid #fcd29a;
+      color: black;
       display: block;
     }
   </style>
@@ -40,6 +48,8 @@
   <h1><u>Shop</u></h1>
   <button class="purchaseButton" onclick="Treat()">Sweet Treat: 2 Points</button>
   <button class="purchaseButton" onclick="Sleep()">Extra Hour of Sleep: 3 Points</button>
+  <h1><u>Accountability</u></h1>
+  <button class="recapButton" onclick="report()">Week Recap</button>
   <script>
     let points = 0;
     let accountability = 0;
