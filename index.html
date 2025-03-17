@@ -57,6 +57,7 @@
     let avgNum = 0;
     let avgDen = 0;
     function addPoints(number){
+      number += 1;
       avgNum += number;
       avgDen += 1;
       points += number;
@@ -82,7 +83,6 @@
       const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
     if (typeof daysDifference === 'number') {
-      daysDifference += 1;
       addPoints(daysDifference);
     } else {
       alert(daysDifference);
