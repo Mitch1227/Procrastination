@@ -82,6 +82,7 @@
       const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
     if (typeof daysDifference === 'number') {
+      daysDifference += 1;
       addPoints(daysDifference);
     } else {
       alert(daysDifference);
@@ -111,7 +112,7 @@
         if(avg == 1){
           alert("You've been completing your tasks on the deadline. Pretty good, but there's room for improvement.");}
         if(avg <1){
-          alert("Your productivity was not the best this week. Keep trying and ou can do better next week.");
+          alert("Your productivity was not the best this week. Keep trying and you can do better next week.");
       }  
     }
     }
