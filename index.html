@@ -17,7 +17,7 @@
       border: 1px solid #fcd29a;
       color: black;
       display: block;
-      margin: 30px;
+      margin: 10px;
       cursor: pointer;
     }
     .pointsButton{
@@ -48,13 +48,14 @@
   <button class="pointsButton" onclick="text()">Add Points</button>
   <div class="points" id="pointsCounter">Points: 0</div>
   <h1><u>Shop</u></h1>
-  <button class="purchaseButton" onclick="Treat()">Sweet Treat: 2 Points</button>
-  <button class="purchaseButton" onclick="Sleep()">Extra Hour of Sleep: 3 Points</button>
+  <button class="purchaseButton" onclick="treat()">Sweet Treat: 2 Points</button>
+  <button class="purchaseButton" onclick="sleep()">Extra Hour of Sleep: 3 Points</button>
   <h1><u>Accountability</u></h1>
   <button class="recapButton" onclick="report()">Week Recap</button>
   <script>
     let points = 0;
-    let accountability = 0;
+    let avgNum = 0;
+    let avgDen = 0;
     function addPoints(number){
       points += number;
       loadPoints();
@@ -84,7 +85,7 @@
       alert(daysDifference);
     }
       }
-    function Treat(){
+    function treat(){
       if(points>=2){
         subtractPoints(2);
         alert("Nice choice! Go enjoy that sweet treat.");
@@ -92,13 +93,25 @@
         alert("Not enough points!");
       }
     }
-    function Sleep(){
+    function sleep(){
       if(points>=3){
         subtractPoints(3);
         alert("Sleep an extra hour, you earned it!");
       } else {
         alert("Not enough points!");
       }
+    }
+    function report(){
+      if(avgDen != 0){
+        let avg = avgNum/avgDen;
+        if(avg >= 2){
+          alert("Great Job! You've been completing your tasks ahead of the deadline.");}
+        if(avg == 1){
+          alert("You've been completing your tasks on the deadline. Pretty good, but there's room for improvement.");}
+        if(avg <1){
+          alert("Your productivity was not the best this week. Keep trying and ou can do better next week.");
+      }  
+    }
     }
   </script>
 </body>
